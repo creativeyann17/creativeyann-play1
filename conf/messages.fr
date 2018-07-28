@@ -1,0 +1,161 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+# base.html ---------------------------------------------------------------------
+fr=Français
+en=Anglais
+language=Langue
+articles=Articles
+projects=Projets
+summary=CV
+contact=Contact
+about=A propos
+link.to=Lien vers %s
+# --------------------------------------------------------------------------------
+
+# index.html ---------------------------------------------------------------------
+under.construction=Dernière mise-à-jour faite le: %s
+under.construction.notdone=Le site web est actuellement en construction. Cette page n'est pas encore disponible.
+under.construction.nottranslated=Le site web est actuellement en construction. Cette page n'est pas encore disponible dans cette langue.
+view.details=Plus de détails
+articles.details=Cette section contient différents petits programmes en tout genre que j'ai fait sur mon temps libre ou dans le cadre de programmes scolaire. Il y a tout et n'importe quoi!
+projects.details=Les projets sont plus aboutis et  complets que les articles, c'est pourquoi ils méritent une présentation plus détaillée. Cette section est là pour ça.
+summary.details=Mes derniers CV à jour dans différentes langues. Ils respectent le format papier A4 pour une impression rapide.
+contact.details=Une page spéciale avec un formulaire qui vous permet de me contacter.
+about.details=Pour en savoir plus sur moi, ce site, le serveur sur lequel il tourne, vous pouvez vous rendre ici.
+welcome.title=Bienvenue sur mon site-perso!
+welcome.message=Ce site propose divers articles et projets que je réalise sur mon temps libre. Il met aussi à disposition mes CV dans plusieurs langues. Je vous souhaite une agréable visite et si vous souhaitez me contacter un lien rapide se trouve juste ici.
+welcome.link=Me contacter
+# --------------------------------------------------------------------------------
+
+# articles.html ---------------------------------------------------------------------
+articles.title=Liste des articles
+articles.name=Nom
+articles.language=Langue
+articles.context=Thématique
+articles.description=Description
+articles.date=Date
+articles.back=Retour aux articles
+articles.title.language=* Les articles ne sont pas traduit. Seule la langue d'origine est disponible.
+# --------------------------------------------------------------------------------
+
+# contact.html ---------------------------------------------------------------------
+contact.title=Formulaire de contact
+contact.subject=Sujet
+contact.subject.default=Le sujet de votre message
+contact.email=Email
+contact.email.default=Une adresse email pour pouvoir vous répondre
+contact.message=Message
+contact.message.default=Le contenu de votre message
+contact.about=
+contact.submit=Envoyer
+contact.success=Le message a bien été envoyé!
+contact.error=Le message n'a pas été envoyé pour la raison suivante:
+contact.antispam=Anti-spam: vous devez attendre avant de pouvoir envoyer un autre message
+# --------------------------------------------------------------------------------
+
+# projects.html ------------------------------------------------------------------
+probe.title=Probe le robot
+probe.details=Résultat d'une enfance bercée (ou traumatisée) par les films de sciences fictions! Fini les montages papiers/carton avec de la colle et du scotch, voici mon 1er robot fait de plastique, métal et de circuit en tous genres, le tout programmable!
+
+probe.title1=Introduction
+probe.title2=Mécanique
+probe.title3=Electronique
+probe.title4=Programmation
+probe.title5=Et ensuite
+probe.title6=Téléchargement
+probe.title7=Galerie
+probe.title8=Vidéo
+
+probe.title1.text=Depuis que je suis gamin j'ai toujours essayé de construire un robot, quelque chose de minimal avec des roues, le principal c'est qu'il soit programmable! Malheureusement se fût très souvent un échec. Le manque de savoir et de connaissances dans une électronique programmable par forcement facile pour tous a eut raison de mes efforts. Ce n'est que par la suite après les études supérieures que j'ai retenté l'aventure!
+probe.title2.text=Probe n'est pas un robot en carton (même s'il y a quelques morceaux par-ci par-là ^^'). Il est fait de plexiglas découpé au cutter et assemblé via de la visserie de petites ou moyenne taille. Pour les parties les plus grosses j'ai utilisé des boîtes récupérées un peu partout. Une fois le châssis réalisé c'est au tour des servo-moteurs de prendre place. Il y a un servo-moteur classique à 180° pour la direction et deux autres à roue libre (360°) pour la motorisation.
+probe.title3.text=Pour l'électronique j'ai mis la main dans le cambouis! L'alimentation est faite par un pack d'accus rechargeables 5 x 1.2 = 6V régulé par une platine faite maison à base de 7805 pouvant délivrer 1A max. Une seconde version de la platine a permis l'ajout d'un fusible pour la sécurité. Pour recharger tout ça j'utilise un platine (achetée dans le commerce) sur laquelle je branche un transformateur 12 V. Il ne manque plus qu'un interrupteur ON/OFF et le tour est joué.
+probe.title4.text=Sans doute le point qui m’intéresse le plus dans ce projet: comment est programmée la bête? La carte programmable utilisée est une Teensy USB qui est compatible Arduino, c'est-à-dire qu'on peut utiliser le logiciel des cartes ainsi que les librairies mises à disposition pour Arduino. Ce que certaines personnes ne savent pas c'est que derrière le code simpliste fourni en exemple par défaut dans l'IDE c'est que ce n'est pas en C mais bien en C++ que vous pouvez coder. Il y a des restrictions bien entendu comme sur tous systèmes embarqués: <li>Pas d'accés à la STL (list,map,string...)</li><li>Pas de gestion des exceptions</li><li>Pas de gestion des méthodes virtuelles pures</li><br/>Par contre toute la gestion orienté objet est présente ce qui laisse énormement de possibilitées!
+probe.title5.text=Par la suite j'ai tout démonté dans le but de construire une version 2 à Probe. Il se trouve que la version suivante fût en gros une refonte de la mécanique pour qu'il soit plus "beau". Cependant cette version n'a jamais réellement fonctionné. Moins de temps libre et de motivation je l'ai laissé un peu à l'abandon. Vous pourrez tout de même trouver quelques photos dans la partie galerie plus bas.
+probe.title6.text=Vous trouverez ci-dessous les fichiers que je met à disposition en lien avec Probe.
+probe.title7.text=Voici quelques photos de Probe version 1 et 2. A savoir que la 2ème version n'a jamais été finalisée.
+probe.title8.text=Vous trouverez ci-dessous des vidéos de Probe le robot.
+
+probe.title3.subtext=Vue d'ensemble
+probe.title4.subtext=Diagramme de classe
+probe.title6.subtext=Code source
+probe.title8.subtext=Probe se déplace
+
+siteV1.title=Creative Yann V1
+siteV1.details=Si vous allez dans "A propos" vous pouvez voir que ce site est en version 2 il y a donc une version précédente? En effet il y en a une et c'est ici que vous pouvez en apprendre plus sur l'ancien code qui globalement a été repris à 80 pourcent.
+
+siteV1.title1=Introduction
+siteV1.title2=Conception
+siteV1.title3=HTML / CSS / JavaScript
+siteV1.title4=Play Framework 1.2.x
+siteV1.title5=Raspberry PI B+
+siteV1.title6=Contenu / Design
+siteV1.title7=Version mobile
+siteV1.title8=Sécurité
+siteV1.title9=Administration
+siteV1.title10=Téléchargement
+siteV1.title11=Galerie
+
+siteV1.title1.text=<p>Dans le but de promouvoir mes connaissances en informatique acquises avec les années j'ai décidé de réaliser un site-web qui en plus d'être le meilleur de ce que puisse faire, point de vu Web, contient sous forme d'articles divers projets réalisés sur mon temps libre dans le domaine de l'embarqué, applis desktop, mobile et autres. Pour résumer ce site sert avant tout de CV, même si une version A4 classique <a target="_blanck" href="/public/CVs/FR.html">reste disponible</a>.</p>\
+<p>Cette page traite de la réalisation de ce site, celui que vous visualisez actuellement. Vous y trouverez des explications sur le contenu, la forme mais aussi les aspects techniques de sa réalisation. Le but de cette page, pour moi, est de donner un aperçu sur les coulisses de la réalisation, des problèmes rencontrés ainsi que des solutions mise en place.</p>\
+<p>Je tiens à remercier ma sœur qui a joué, avec un grand sérieux, la beta testeuse, petite publicité: elle tient un blog sur la littérature Fantastique/SF que vous trouverez <a href="http://www.ebullimots.com" target="_blanck">à cette adresse</a>.</p>
+
+siteV1.title2.text=Cette partie liste les choix technologiques que j'ai fais avec quelques contraintes:\
+<li>Avoir un minimum de connaissances de base pour développer tranquillement.</li>\
+<li>La gratuité et la facilité d'accès aux outils, promouvoir si possible le monde du libre.</li>\
+</p>
+
+siteV1.title3.text=<p>L'élément commun à tous les sites web, et ceci peu importe le serveur qui tourne derrière, reste le duo HTML/CCS. C'est la base pour le contenu et la mise en forme des pages coté client. J'ai principalement concentré mes efforts sur la mise en pratique du <a target="_blanck" href="http://fr.wikipedia.org/wiki/HTML5">HTML5</a> qui est la dernière norme du <a target="_blanck" href="http://fr.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a> tout en cherchant à rester compatible avec les navigateurs web plus anciens surtout avec le CSS.</p>\
+<p>En ce qui concerne le JavaScript ce fût l'occasion pour moi de me former quasiment de zéro, car c'est un langage que je ne connaissais vraiment pas. Suite à quelque tuto et en restant à la base (pas de librairies additionnelles) j'ai très vite apprécié la fait de pouvoir faire des actions coté client sans avoir à remonter une requête vers le serveur. La page « contact » est, par exemple, fait cent pour cent maison.</p>
+
+siteV1.title4.text=<p>Oubliez PHP, ASP.NET dites bonjour à Play Framework (aujourd'hui en <a target="_blanck" href="https://www.playframework.com/">version 2.x</a>). J'ai découvert ce Framework dans le cadre d'une mission professionnelle, j'ai très vite accroché! Ce qui m'a surtout plût c'est le fait de pouvoir utiliser JAVA comme base de travail mais contrairement à un J2EE super lourd en infrastructure, ici tout est compris, facilement configurable (via quelques fichiers de propriétés) et hop on lance le tout et ça tourne sur tout ce qui dispose d’une JRE!</p>\
+
+siteV1.title5.text=<p>Comme évoqué dans ma liste de contraintes, le site devra être hébergé chez moi il me faut donc un "serveur". Je dispose d'un PC portable ainsi que d'un netbook. Le netbook serait parfait mais j'aimerai quand même quelque chose qui consomme peu et qui donnerait un point bonus à tout ce projet...un <a target="_blanck" href="http://www.raspberrypi.org/">raspberry PI</a> serait la cerise sur le gâteau! J'ai opté pour la nouvelle déclinaison à savoir la B+ qui n'apporte pas de grande nouveautés en terme de performance mais des améliorations internes et sur la connectique.</p>\
+<p>Un point important sur ce mini-PC est qu'il n'est pas de la famille des x86 (comme les plupart des ordinateurs) mais ARM (comme un smartphone). Des distributions Linux compilées pour ARM sont heureusement disponible je choisi donc la version proche de Debian: Raspbian. Je vérifie aussi qu’Oracle propose une machine virtuelle JAVA pour ARM car je vais en avoir besoin pour exécuter Play Framework. C'est le cas tout est bon :)</p>\
+<p>A titre indicatif, en terme d'argent: Raspberry PI B+, boite blanche, alimentation 5v, carte SD (ultra débit, car elle sert de disque dur) et une clé WIFI, le tout pour environ 100€. Bien entendu il faut regarder la consommation électrique sur l'année que j'estime à 30€ (box internet + serveur 24/24) </p>
+
+siteV1.title6.text=<p>Le contenu du site reste principalement orienté compétence informatique, montrer ce que j'ai appris, en gros un CV interactif. Je garde quand même à l'idée de pouvoir rajouter d'autres choses comme des images réalisées avec Blender/Gimp principalement Science-fiction ou n'importe quoi d'autre, au final ça reste un site-perso.</p>\
+<p>Le design c'est quelque chose de subjectif, et parfois même ça change avec l'humeur du jour! Pour le site-web j'ai opté pour un design PRO, plat car c'est à la monde en ce moment (avec Windows 8/Android 5), sombre dans le jeu de couleur pour ressembler à mon site précédant.</p>
+
+siteV1.title7.text=<p>Lors de mes premiers essais, on m'a remonté la nécessité de rendre le site <a target="_blanck" href="http://fr.wikipedia.org/wiki/Site_web_adaptatif">"responsive"</a> pour qu'il soit accessible sur n'importe quel périphérique mobile. J'ai tout de suite apprécié l'idée, beaucoup moins les efforts supplémentaire à faire pour l'adapter. J'ai commencé par écrire un bout de code pour détecter depuis où la personne visualise mon site: Android, Iphone, Ipad, Blackberry, Windows Phone. Si c'est le cas une page particulière s'ouvre demandant de choisir entre la version mobile du site ou la version classique (sans modification de la forme). Le site dispose de 3 formats: 0 à 500 px, 500px à 1000px, 1000px et plus ainsi que deux class CSS qui varient "noSmallDevice" et "smallDevice". En jouant avec tout ceci j'obtiens à faible effort un site web qui fonctionne sur mobile.</p>\
+<p>Pour mes tests j'utilise Chrome et son simulateur de périphériques mobile vraiment pratique, ainsi que mon téléphone: Android 2.3 HTC 320x480 antique mes très adapté pour le coup pour valider le fonctionnement sur un vieux navigateur web.</p>
+
+siteV1.title8.text=<p>Un autre sujet sur lequel je me suis penché, la sécurité. En effet je me suis posé de nombreuses questions sur la gestion d'une session web, les données que je pouvais y stocker en particulier pour la partie administration du site qui permet d'éditer les articles disponible et de visualiser les messages que l'on m'a envoyé. Play Framework ne crypte pas les sessions par défaut mais les signe ce qui me garantit qu'elles sont authentiques et personne ne peut s'en fabriquer une fausse.</p>\
+<p>En ce qui concerne les formulaires sur le site Play Framework propose aussi un champ invisible qui contient une clé générée sur demande. Lors de la validation le serveur vérifie si la clé et correcte. Cela me protège des formulaires qui voudraient se faire passer pour ceux de mon site en visant les même actions.</p>
+
+siteV1.title9.text=<p>Mais que se cache-t-il donc derrière cette page? En fait c'était plus un défis à l'origine savoir coder une page nécessitant un login. Au final c'est bien pratique car je peux réaliser certaines actions sans être chez moi directement sur le serveur. Exemple: lire les messages que j'ai reçu ou encore mieux rajouter un article ce qui consiste à envoyer un fichier HTML via un formulaire.</p>
+
+siteV1.title10.subtext=Code source du site
+# --------------------------------------------------------------------------------
+
+# about.html ---------------------------------------------------------------------
+aboutMe=A propos de moi
+years=ans
+aboutServer=Détails sur le serveur
+ENSISA=Ingénieur Informatique & Réseaux (ENSISA Mulhouse)
+DUT=+ DUT Télécommunications & Réseaux (IUT Nancy-Brabois)
+currentCity=Actuellement sur %s (%s)
+about.contact=Email:
+serverRunningSince=Le serveur tourne depuis
+appVersion=Version du site-web
+osDetails=Système d'exploitation
+kernelDetails=Version noyau OS
+hwDetails=Details matériel
+jreDetails=Version de JAVA
+playFramework=Play Framework
+serverMemory=Consommation mémoire
+memory.consumption=%s/%s MBytes (max: %s)
+about.admin=Administration
+
+about.thanks=Un remerciement spécial
+about.thanks.message=Ma soeur et mon bof pour les remarques et retours constructifs pendant le developpement du site. A charge de revanche ;)
+
+about.link=Liens externes
+about.link.1=Play Framework
+about.link.1.message=Le framework JAVA sur lequel tourne ce site. 
+about.link.2=Boostrap
+about.link.2.message=Un framework all-in-one pour réaliser un site-web responsive.
+about.link.3=Glyphicons
+about.link.3.message=Le site qui fournit les glyphes mise-à disposition dans Bootstrap.
+# --------------------------------------------------------------------------------

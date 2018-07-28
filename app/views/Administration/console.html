@@ -1,0 +1,22 @@
+#{extends 'base.html' /}
+
+<h3><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" class="color1"></span> <a href="/admin/index">Go Back</a></h3>
+<h2>Console</h2>
+
+<style>
+	.console{
+		width: 100%; 
+		padding: 5px;
+		background-color: black;
+		color: white;
+		font-size: small;
+		font-family: courier;
+		overflow: auto;
+		height: 350px;
+		border: 2px solid darkgrey;
+	}
+</style>
+
+<div class="console">
+${consoleMessages.nl2br()}
+</div>

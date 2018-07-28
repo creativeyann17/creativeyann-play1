@@ -1,0 +1,159 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+# base.html ---------------------------------------------------------------------
+fr=French
+en=English
+language=Language
+articles=Articles
+projects=Projects
+summary=Resume
+contact=Contact
+about=About
+link.to=Link to %s
+# --------------------------------------------------------------------------------
+
+# index.html ---------------------------------------------------------------------
+under.construction=Last update done the: %s
+under.construction.notdone=The web-site is currently under construction. This page is not available for now.
+under.construction.nottranslated=The web-site is currently under construction. This page is not available in this language for now.
+view.details=More details
+articles.details=This section contains small programs done at school or over my free time. There is a small description for each of them with a possibility of downloads.
+projects.details=The main difference with articles is that projects are much more advanced. There is a need of more explanation and description. This is the purpose of this section.
+summary.details=My last up-to-date resumes in several languages. They fit the A4 printer page format.
+contact.details=You can use this page to contact me. It provides a form ready for that.
+about.details=If you want to know more about me or this web-site and the server it's running on go here.
+welcome.title=Welcome to my personal web-site!
+welcome.message=This web-site describes several projects i'm working on during my free time. It also provides my last resumes in different languages. I wish you a nice visit and if you want to contact me a button is right here just for you!
+welcome.link=Contact me
+# --------------------------------------------------------------------------------
+
+# articles.html ---------------------------------------------------------------------
+articles.title=List of articles
+articles.name=Name
+articles.language=Language
+articles.context=Thematic
+articles.description=Description
+articles.date=Date
+articles.back=Back to the articles
+articles.title.language=* The articles are not translated. Only the writing language is available.
+# --------------------------------------------------------------------------------
+
+# contact.html ---------------------------------------------------------------------
+contact.title=Contact form
+contact.subject=Subject
+contact.subject.default=Subject of your message
+contact.email=Email
+contact.email.default=An address to answer you
+contact.message=Message
+contact.message.default=Content of your message
+contact.about=
+contact.submit=Send
+contact.success=The message has been sent!
+contact.error=The message has not been sent for the following reason:
+contact.antispam=Anti-spam: you have to wait few seconds before sending another message
+# --------------------------------------------------------------------------------
+
+# projects.html ------------------------------------------------------------------
+probe.title=Probe the robot
+probe.details=Result of a childhood rocked (or traumatized) by the films of science fiction! No more paper mounts / carton with glue and tape, this is my first robot made of plastic, metal and circuit of all kinds, all programmable!
+probe.title1=Introduction
+probe.title2=Mechanical
+probe.title3=Electronics
+probe.title4=Programming
+probe.title5=What's next?
+probe.title6=Download
+probe.title7=Gallery
+probe.title8=Movie
+
+probe.title1.text=Since I was a kid I always tried to build a robot, something minimal with wheels, the main thing is that it is programmable! Unfortunately is was often a failure. Lack of knowledge and knowledge by a programmable electronic necessarily easy for all was a result of my efforts. It was only later after graduate school I retried the adventure!
+probe.title2.text=Probe is not a cardboard robot (even if some pieces by here and there ^^ '). It is made of plexiglass cutter to cut and assembled via the screws of small or medium size. For larger parts I used boxes recovered everywhere. When the frame realized it was the turn of servo motors to take place. There is a conventional servomotor 180 ° for direction and two other freewheel (360 °) to motorization.
+probe.title3.text=For electronics I reached into dirty! The power supply is made by a pack of rechargeable batteries 5 x 1.2 = 6V regulated by a platen 7805 made basic to house can deliver 1A max. A second version of the plate allowed the addition of a fuse for safety. To recharge all this I use a platinum (purchased commercially) on which I plug transformer 12 V. It's missing a ON / OFF switch and voila.
+probe.title4.text=Probably the point that interests me most in this project: how is programmed beast? The programmable card is used that is compatible Teensy USB Arduino, that is to say, we can use the software maps and libraries made available for Arduino. What some people do not know is that behind the simple example code provided by default in the IDE is that this is not C but C ++ you can code. There are of course limitations as all embedded systems: <li>No access to the STL (list, map, string ...) (list,map,string...)</li><li>No exception handling</li><li>No management pure virtual methods</li><br/>As against the whole object-oriented management is present which leaves hugely of possibilities!
+probe.title5.text=Subsequently I have everything removed in order to build a version 2 Probe. It happens that the next version was basically a redesign of the mechanical to be more "beautiful". However this version never really worked. Less free time and motivation I left a little abandoned. You can still find some pictures in the gallery section below.
+probe.title6.text=You will find the files I provides related Probe. 
+probe.title7.text=Here are some pictures of Probe version 1 and 2. Namely, the second version was never finalized.
+probe.title8.text=You will find below Probe videos of the robot.
+
+probe.title3.subtext=Global details
+probe.title4.subtext=Class diagram
+probe.title6.subtext=Source code
+probe.title8.subtext=Probe moving alone
+
+siteV1.title=Creative Yann V1
+siteV1.details=If you go to "About" you can see that this site is version 2 so there is a previous version? Indeed there is one and it is here that you can learn more about the old code which overall was taken to 80 percent.
+siteV1.title1=Introduction
+siteV1.title2=Design
+siteV1.title3=HTML / CSS / JavaScript
+siteV1.title4=Play Framework 1.2.x
+siteV1.title5=Raspberry PI B+
+siteV1.title6=Content / UI
+siteV1.title7=Mobile version
+siteV1.title8=Security
+siteV1.title9=Administration
+siteV1.title10=Download
+siteV1.title11=Gallery
+
+siteV1.title1.text=<p>In order to promote my computer knowledge gained over the years I decided to make a web-site that in addition to being the best that can do web point of view, contains as articles various projects made in my free time in the field of embedded, desktop apps, mobile and others. To summarize this site serves primarily as CV, although a classic version of A4 <a target="_blanck" href="/public/CVs/FR.html">remains available</a>.</p>\
+<p>This page deals with the creation of this site, the one you are currently viewing. Here you will find explanations on the content, form and also the technical aspects of its implementation. The purpose of this page, for me, is to give an insight behind the scenes of the realization of the problems encountered and solutions implemented.</p>\
+<p>I want to thank my sister, who has played with great seriousness, beta tester, small advertising: she writes a blog on the Fantasy / SF literature you will find <a href="http://www.ebullimots.com" target="_blanck">at this address</a>.</p>
+
+siteV1.title2.text=This section lists the technology choices that I made with some constraints:\
+<li>Have a minimum basic knowledge to develop peacefully.</li>\
+<li>Free and easy access to tools, if possible promote open source tools.</li>\
+</p>
+
+siteV1.title3.text=<p>The common element in all websites, and this regardless of the server running behind, remains the HTML / CCS duo. This is the basis for the content and layout of client-side pages. I mainly concentrated my efforts on the practical implementation of <a target="_blanck" href="http://fr.wikipedia.org/wiki/HTML5">HTML5</a> is the latest standard of the <a target="_blanck" href="http://fr.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a> while seeking to remain compatible with older web browsers especially with CSS.</p>\
+<p>As for JavaScript it was an opportunity for me to train me virtually zero because it is a language that I do not really know. Following a tutorial and remaining at the base (no additional libraries) I quickly appreciated being able to share client-side without having to back a request to the server. The "contact" page, for example, is one hundred percent home.</p>
+
+siteV1.title4.text=<p>Forget PHP, ASP.NET say hello to Play Framework (now in <a target="_blanck" href="https://www.playframework.com/">version 2.x</a>). I discovered this Framework as part of a professional mission, I quickly hooked! What would please me most is the fact you can use JAVA as a working basis but unlike a super heavy J2EE infrastructure, here everything is included, easily configurable (via some property files) and hop on any Launches and it runs on anything that has a JRE!</p>\
+
+siteV1.title5.text=<p>As mentioned in my list of constraints, the site will be hosted at home so it takes me a "server". I have a laptop and a netbook. The netbook would be perfect but I'd still something that consumes little and give a bonus point this whole project ... a <a target="_blanck" href="http://www.raspberrypi.org/">raspberry PI</a> would be the icing on the cake! I opted for the new declination namely B + which does not bring great news in terms of performance but internal improvements and connections.</p>\
+<p>An important point of this mini-PC is that it is not of the family of x86 (like most computers) but ARM (like a smartphone). Linux distributions are compiled for ARM available fortunately I chose the version closest to Debian: Raspbian. I also verifies that Oracle offers a Java virtual machine for ARM because I'm going to need to run Play Framework. This is the case all is good :)</p>\
+<p>For information, in terms of money: Raspberry PI B +, white box, 5v power supply, SD card (ultra speed, as it serves as HDD) and a WiFi key, all for about € 100. Of course we must look at the power consumption of the year I estimated € 30 (internet server box + 24/24)</p>
+
+siteV1.title6.text=<p>The site content is still mainly oriented IT skills, show what I've learned, basically an interactive CV. I still keep to the idea of ​​being able to add other things like images taken with Blender / Gimp mainly Science fiction or anything else, in the end it remains a Persian-site.</p>\
+<p>Design is something subjective and sometimes it changes with the mood of the day! For the site-web I opted for PRO design, flat as it is to the world right now (with Windows 8 / Android 5), dark color in the game to look like my website before.</p>
+
+siteV1.title7.text=<p>During my first tests, I was back up the need to make the site <a target="_blanck" href="http://fr.wikipedia.org/wiki/Site_web_adaptatif">"responsive"</a> to be accessible on any mobile device. I immediately liked the idea, much less the extra work to do to adapt. I started writing some code to detect from where the person visualizes my site: Android, Iphone, Ipad, Blackberry, Windows Phone. If this is the case a particular page will open asking to choose between mobile version of the site or the classic version (without changing the shape). The site has 3 formats: 0-500 px, 500px to 1000px, 1000px more and two CSS class that vary "noSmallDevice" and "smallDevice". Playing with all this I get low-effort a website that works on mobile.</p>\
+<p>For my tests I use Chrome and simulator really convenient mobile devices and my phone: Android 2.3 HTC ancient 320x480 my very suitable for once to validate the operation on an old web browser.</p>
+
+siteV1.title8.text=<p>Another subject on which I leaned, security. In fact I asked myself many questions about the management of a web session, data that I could store especially for the administration part of the site for editing articles available and view the messages that are sent me. Play Framework does not encrypt the default sessions but the sign which guarantees me that they are authentic and no one can make one false.</p>\
+<p>As regards the forms on the play framework site also has a field that contains an invisible key generated on demand. When validating the server checks whether the key and correct. This protects me forms that would impersonate those of my site for the same actions.</p>
+
+siteV1.title9.text=<p>But what is he hiding behind so this page? In fact it was more of a challenge to find out the origin code a page that requires a login. In the end it was helpful as I can perform certain actions without being home directly on the server. Example: read the messages that I have received, or even better add an article which is to send a file via an HTML form.</p>
+
+siteV1.title10.subtext=Website source code
+# --------------------------------------------------------------------------------
+
+# about.html ---------------------------------------------------------------------
+aboutMe=About me
+years=years
+aboutServer=Details about the server
+ENSISA=Engineering schools in technology at ENSISA Mulhouse
+DUT=+ (DUT) two-year university degree in technology at (IUT) university institute of technology Nancy-Brabois
+currentCity=Currently at %s (%s)
+about.contact=Email:
+serverRunningSince=The server is running since
+appVersion=Web-site version
+osDetails=Operating system
+kernelDetails=OS Kernel version
+hwDetails=Hardware details
+jreDetails=JAVA version
+playFramework=Play Framework
+serverMemory=Memory consumption
+memory.consumption=%s/%s MBytes (max: %s)
+about.admin=Administration
+
+about.thanks=Special thanks
+about.thanks.message=My sister and her husband for the remarks and feedbacks during the development of the web-site. I owe you one ;)
+
+about.link=External links
+about.link.1=Play Framework
+about.link.1.message=The JAVA framework the website is running on 
+about.link.2=Boostrap
+about.link.2.message=A dedicated all-in-one responsive framework
+about.link.3=Glyphicons
+about.link.3.message=Site which provides the bootstrap's glyphes
+# --------------------------------------------------------------------------------

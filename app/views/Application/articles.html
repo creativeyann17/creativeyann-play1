@@ -1,0 +1,72 @@
+#{extends 'base.html' /}
+#{stylesheet 'tablesorter.css' /}
+#{script 'jquery.tablesorter.js' /}
+
+<script>
+	(function(){
+		setPage("articlesMenu");
+	})();
+</script>
+
+#{if article }
+<div>
+	<table  class="table table-bordered">
+		<tr class="active">
+			<td><b>&{'articles.language'}:</b> ${article.language}</td>
+			<td><b>&{'articles.context'}:</b> 
+			#{list article.context.split(" "), as:'con'}
+			<span class="label label-default">${con}</span>
+			#{/list}
+			</td>
+			<td><b>&{'articles.date'}:</b> ${article.date.format('dd MMMM yyyy')}</td>
+		</tr>
+		<tr>
+			<td colspan="3" style="padding-top: 20px;">
+				<iframe  style="width: 100%;border: none;" src="/public/articles/${article.html}" onload="resizeIframe(this)">
+				</iframe>
+			</td>
+			
+		</tr>
+		<tr class="active">
+			<td colspan="3"><a href="/articles"><b><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" class="color1"></span> &{'articles.back'}</b></a></td>
+		</tr>
+	</table>
+</div>
+#{/if}
+#{else}
+<h2>&{'articles.title'}</h2>
+<p style="text-align: justify;margin-top: 20px;">&{'articles.title.language'}</p>
+<form method="GET" action="/articles">
+#{authenticityToken /}
+<table id="myTable" class="tablesorter table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>&{'articles.name'}</th><th>&{'articles.language'}&nbsp;*</th><th>&{'articles.context'}</th><th>&{'articles.description'}</th><th>&{'articles.date'}</th>
+		</tr>
+	</thead>
+	<tbody>
+		#{list articles, as:'article'}
+			<tr>
+				<td><button class="btn btn-primary" style="width: 150px; height: 50px; white-space: normal;" value="${article.id}" type="submit" name="id">${article.name}</button></td>
+				<td>${article.language}</td>
+				<td>
+				#{list article.context.split(" "), as:'con'}
+				<span class="label label-default">${con}</span>
+				#{/list}
+				</td>
+				<td>${article.description}</td>
+				<td>${article.date.format('dd MMMM yyyy')}</td>
+			</tr>
+		#{/list}
+	</tbody>
+</table>
+</form>
+#{/else}
+
+<script type="text/javascript">
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter(); 
+    } 
+); 
+</script>

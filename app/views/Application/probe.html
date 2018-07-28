@@ -1,0 +1,121 @@
+#{extends 'base.html' /}
+
+<script>
+	(function(){
+		setPage("projectsMenu");
+	})();
+</script>
+
+#{stylesheet 'masterhead.css' /}
+
+<div class="container">
+<h1>&{'probe.title'}</h1>
+</div>
+
+<!--main-->
+<div class="container">
+
+	<div class="row">
+
+      <div class="col-md-3" id="leftCol">
+          <ul class="nav nav-stacked" id="sidebar">
+          <li><a href="#sec1">&{'probe.title1'}</a></li>
+          <li><a href="#sec2">&{'probe.title2'}</a></li>
+          <li><a href="#sec3">&{'probe.title3'}</a></li>
+          <li><a href="#sec4">&{'probe.title4'}</a></li>
+          <li><a href="#sec5">&{'probe.title5'}</a></li>
+          <li><a href="#sec6">&{'probe.title6'}</a></li>
+          <li><a href="#sec7">&{'probe.title7'}</a></li>
+          <li><a href="#sec8">&{'probe.title8'}</a></li>
+        </ul>
+      </div>
+      
+      <!--right-->
+      <div class="col-md-9">
+      
+        <h2 id="sec1">&{'probe.title1'}</h2>
+        <p>
+          &{'probe.title1.text'}
+          </p>
+          
+        <hr>
+        
+        <h2 id="sec2">&{'probe.title2'}</h2>
+        <p>
+          &{'probe.title2.text'}
+        </p>
+
+        <h2 id="sec3">&{'probe.title3'}</h2>
+        <div class="row">
+          <div class="col-md-6">
+              <p>
+	        &{'probe.title3.text'}
+	        </p>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading"><h3>&{'probe.title3.subtext'}</h3></div>
+              <div class="panel-body"><img src="public/images/Probe/schema.png" class="img-responsive" />
+              </div>
+            </div>
+          </div>  
+          </div>
+  
+                
+        <h2 id="sec4">&{'probe.title4'}</h2>
+        <div class="row">
+         <div class="col-md-6">
+              <p>
+	        &{'probe.title4.text'}
+	        </p>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading"><h3>&{'probe.title4.subtext'}</h3></div>
+              <div class="panel-body"><img src="public/images/Probe/uml.png" class="img-responsive" />
+              </div>
+            </div>
+          </div>  
+		</div>
+         
+        <hr>
+        
+        <h2 id="sec5">&{'probe.title5'}</h2>
+	        <p>
+	          &{'probe.title5.text'}
+	         </p>
+
+
+		<h2 id="sec6">&{'probe.title6'}</h2>
+		<p>
+		  &{'probe.title6.text'}
+        	<br/><br/><a href="public/files/ProbeSource.zip">&{'probe.title6.subtext'}</a>
+        	</p>
+
+        <h2 id="sec7">&{'probe.title7'}</h2>
+               <p> &{'probe.title7.text'}<p>
+        <div class="row">
+
+     	  <div class="col-md-4"><img src="public/images/Probe/probe1_1.jpg" class="img-responsive" /></div>
+          <div class="col-md-4"><img src="public/images/Probe/probe1_2.jpg" class="img-responsive" /></div>
+          <div class="col-md-4"><img src="public/images/Probe/probe1_3.jpg" class="img-responsive"></div>
+        </div>
+        <br/>
+        <div class="row">
+
+     	  <div class="col-md-4"><img src="public/images/Probe/probe2_1.jpg" class="img-responsive" /></div>
+          <div class="col-md-4"><img src="public/images/Probe/probe2_2.jpg" class="img-responsive" /></div>
+          <div class="col-md-4"><img src="public/images/Probe/probe2_3.jpg" class="img-responsive"></div>
+        </div>
+        
+        <h2 id="sec8">&{'probe.title8'}</h2>
+		<p>
+		  &{'probe.title8.text'}
+        	<br/><br/><a href="public/files/ProbeVideo.zip">&{'probe.title8.subtext'}</a>
+        	</p>
+
+        </div><!--/right-->
+  	</div><!--/row-->
+</div><!--/container-->
+
+#{script 'masterhead.js' /}		

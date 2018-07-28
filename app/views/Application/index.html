@@ -1,0 +1,55 @@
+#{extends 'base.html' /}
+
+<script>
+	(function(){
+		setPage("homeMenu");
+	})();
+</script>
+
+<div class="alert alert-info" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> &{'under.construction',page.lastUpdate.format('yyyy/MM/dd HH:mm:ss')}</div>
+
+    <!-- <div class="jumbotron"> -->
+        
+     <!-- </div> -->
+
+
+		<h2><strong>&{'welcome.title'}</strong></h2>
+        <p class="lead">&{'welcome.message'}</p>
+        <p><a class="btn btn-primary" href="/contact" role="button">&{'welcome.link'}</a></p>    
+    
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>&{'articles'}</h2>
+          <p>&{'articles.details'}</p>
+          <p><a class="btn btn-default" href="/articles" role="button">&{'view.details'} &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>&{'projects'}</h2>
+          <p>&{'projects.details'}</p>
+          <p><a class="btn btn-default" href="/projects" role="button">&{'view.details'} &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>&{'contact'}</h2>
+          <p>&{'contact.details'}</p>
+          <p><a class="btn btn-default" href="/contact" role="button">&{'view.details'} &raquo;</a></p>
+        </div>
+       </div>
+       
+       <div class="row">
+        <div class="col-md-4">
+          <h2>&{'about'}</h2>
+          <p>&{'about.details'}</p>
+          <p><a class="btn btn-default" href="/about" role="button">&{'view.details'} &raquo;</a></p>
+         
+        </div>
+        <div class="col-md-4">
+          <h2>&{'summary'}</h2>
+           <p>&{'summary.details'}</p>
+       </div>
+        <div class="col-md-4">
+
+       </div>
+      </div>
+  
+      

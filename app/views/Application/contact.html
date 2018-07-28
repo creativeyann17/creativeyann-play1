@@ -1,0 +1,56 @@
+#{extends 'base.html' /}
+
+<script>
+	(function(){
+		setPage("contactMenu");
+	})();
+	
+	function updateCounter(textAera){
+		var counter=document.getElementById("contactCounter");
+		var max=textAera.getAttribute('maxlength');
+		var count=textAera.value.length;
+		var diff=max-count;
+		counter.innerHTML=diff+"/"+max;
+	}
+</script>
+
+#{if flash.contains("contact.success")}
+<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ${flash.get("contact.success")}</div>
+#{/if}
+
+#{if flash.contains("contact.antispam")}
+<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> ${flash.get("contact.antispam")}</div>
+#{/if}
+
+
+#{if flash.contains("contact.error")}
+<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> ${flash.get("contact.error")}
+#{ifErrors} 
+   #{errors}
+       <li>${error}</li>
+   #{/errors}
+#{/ifErrors}
+</div>
+#{/if}
+
+
+
+<h2>&{'contact.title'}</h2>
+
+<form method="POST" action="/postMessage" onsubmit="return doContactValidation(this)">
+  #{authenticityToken /}
+  <div class="form-group">
+    <label for="subject">&{'contact.subject'}</label>
+    <input autofocus="autofocus" maxlength="50" type="text" class="form-control" name="subject" id="subject" placeholder="&{'contact.subject.default'}" required="required" value="${flash.subject}">
+  </div>
+  <div class="form-group">
+    <label for="email">&{'contact.email'}</label>
+    <input maxlength="50" type="email" class="form-control" name="email" id="email" placeholder="&{'contact.email.default'}" required="required" value="${flash.email}">
+  </div>
+  <div class="form-group">
+    <label for="message">&{'contact.message'}</label>&nbsp<span id="contactCounter"></span><br/>
+    <textarea name="message" class="form-control" id="message" rows="10" spellcheck="true" maxlength="1024" name="message" onkeyup="updateCounter(this)" placeholder="&{'contact.message.default'}" required="required">${flash.message}</textarea>
+    <p class="help-block">&{'contact.about'}</p>
+  </div>
+  <button type="submit" class="btn btn-primary">&{'contact.submit'}</button>
+</form>

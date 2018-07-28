@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- META Informations -->
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	
+    	<!-- FavIcon -->
+		<link rel="icon" type="image/png" href="/public/images/favicon.png" />
+    	
+    	<!-- All Boostrap CSS and JavaScript files -->
+    	<link href="/public/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="/public/bootstrap-3.3.4/css/sticky-footer.css" rel="stylesheet">
+    	
+    	<!-- CreativeYann CSS and JavaScript files -->
+		#{stylesheet 'base.css' /}
+		#{stylesheet 'navbar.css' /}
+		#{get 'moreStyles' /}
+		
+		<title>Creative .:|Yann|:.</title>
+		
+		<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+		<script src="/public/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
+		#{script 'base.js' /}
+		#{get 'moreScripts' /}
+		
+		
+	</head>
+	<body>
+
+		<div id="custom-bootstrap-menu" class="navbar navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a id="homeMenu" class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-menubuilder">
+					 <ul class="nav navbar-nav navbar-left">
+						<li id="articlesMenu"><a href="/articles">&{'articles'}</a>
+						</li>
+						<li id="projectsMenu"><a href="/projects">&{'projects'}</a>
+						</li>
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">&{'summary'} <span class="caret"></span></a>
+						  <ul class="dropdown-menu" role="menu">
+							<li><a href="/public/CVs/FR.html" target="_blanck">&{'fr'}</a></li>
+							<li><a href="/public/CVs/EN.html" target="_blanck">&{'en'}</a></li>
+						  </ul>
+						</li>
+						<li id="contactMenu"><a href="/contact">&{'contact'}</a>
+						</li>
+						<li id="aboutMenu"><a href="/about">&{'about'}</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">&{'language'} <span class="caret"></span></a>
+						  <ul class="dropdown-menu" role="menu">
+							#{list page.languages.keySet(), as:'key'}
+								<li><a href="/Application/setLanguage?lang=${key}">${page.languages.get(key)}</a></li>
+							#{/list}
+						  </ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<header>
+			<!-- <h1>&{'header.text'}</h1>-->
+			<img src="/public/images/header_left.png"/>
+			<a target="_blanck" href="https://www.facebook.com/yann.marcou" style="float: right; position: absolute; top: 65px; right: 15px">
+				<img title="&{'link.to','Facebook'}" src="/public/images/fb.png" />
+			</a>
+			<a target="_blanck" href="http://fr.linkedin.com/pub/yann-marcou/67/802/212" style="float: right; position: absolute; top: 65px; right: 55px;"> 
+				<img title="&{'link.to','LinkedIn'}" src="/public/images/in.png"/>
+			</a>
+			<a target="_blanck" href="https://www.youtube.com/channel/UCUqyzU9fI6KVBFTrsblIHEQ" style="float: right; position: absolute; top: 105px; right: 13px;"> 
+				<img title="&{'link.to','Youtube'}" src="/public/images/yt.png"/>
+			</a>
+		</header>
+		
+		<div class="container">
+			 #{doLayout /}
+		</div>
+		
+		<footer>
+		<hr/>
+			<p>&{'footer.text', '<script>getCurrentYear()</script>'}</p>
+		</footer>
+		
+	</body>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-100564204-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+	
+</html>

@@ -1,0 +1,35 @@
+#{extends 'base.html' /}
+
+<h3><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" class="color1"></span> <a href="/admin/index">Go Back</a></h3>
+<h2>Camera</h2>
+	
+<style>
+	.cameraTable tr, th, td{
+		text-align: center;
+	}
+	.bigButton{
+		border: none;
+		background: none;
+	}
+	#cameraPicture{
+		max-width: 100%;
+		max-height: 100%;;
+	}
+</style>
+	
+<form method="POST" action="/admin/doCameraPicture">
+#{authenticityToken /}
+	<table class="table table-bordered">
+		<tbody>
+			<tr>
+				<th><span style="color: salmon">&nbsp;${flash.cameraException}</span></th>
+			</tr>
+			<tr>
+				<td><img id="cameraPicture" src="${cameraPicture}"/></td>
+			</tr>
+			<tr>
+				<th><button type="submit" class="bigButton"><img src="/public/images/camera.png"/></button></th>
+			</tr>
+		</tbody>
+	</table>
+</form>

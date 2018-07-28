@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /?                                      Application.index
+GET		/articles								Application.articles
+GET		/projects								Application.projects
+GET		/contact								Application.contact
+GET		/about									Application.about
+GET		/admin									Application.admin
+GET		/probe									Application.probe
+GET		/siteV1									Application.siteV1
+POST	/postMessage							Application.postMessage
+POST	/login									Application.login
+GET		/logout									Application.logout
+
+GET		/admin/index							Administration.index
+GET		/admin/console							Administration.console
+GET		/admin/messages							Administration.messages
+GET		/admin/articles							Administration.articles
+GET		/admin/camera							Administration.camera
+
+POST	/admin/doCameraPicture					Administration.doCameraPicture
+POST	/admin/msgActions						Administration.msgActions
+
+GET		/shopping								ShoppingController.index
+POST	/shopping/buy							ShoppingController.buy
+*     	/shopping/admin  						module:crud
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

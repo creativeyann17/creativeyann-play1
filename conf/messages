@@ -1,0 +1,6 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+header.text=<span class="color1">Creative</span> .:|Yann|:.
+footer.text=Copyright %s Yann MARCOU

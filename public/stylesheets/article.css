@@ -1,0 +1,13 @@
+body{
+	margin: 0;
+	width: 98%;
+	color: black;
+
+	font-family: verdana;
+	font-size: small;
+	text-align: justify;
+}
+
+a{
+	color: steelblue;
+}

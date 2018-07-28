@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>JAVALauncher</title>
+		<link href="/public/stylesheets/article.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		
+		<h2>JAVALauncher</h2>
+		<p>
+		Something disturbing for people not familiar with JAVA is to run JAR files. Most of the times a BAT file (under window) is provided to run it.
+		I wrote a C program which based on a configuration file (INI like format) execute the JAR for you. This program works under Windows and Linux.
+		In case JAVA isn't available on your machine it will inform you using an message in a dialog box. A minimal version can also be indicated. 
+		Program and VM parameters are also supported.
+		</p>
+		
+		<h4>Configuration example</h4>
+		<p style="font-family: courier">
+		[PROGRAM]<br/>
+		BIN=lib/prg.jar<br/>
+		ARGS=-server<br/>
+		<br/>
+		[JAVA]<br/>
+		PATH=java<br/>
+		VERSION=1.5.0<br/>
+		ARGS=-Dsun.java2d.opengl=false -Dsun.java2d.d3d=false
+		</p>
+
+		<p>
+		<h4>Download</h4>
+		<ul>
+		<li><a href="/public/articles/data/JAVALauncher.zip">Source code</a></li>
+		</ul>
+		</p>
+		
+	</body>
+</html>

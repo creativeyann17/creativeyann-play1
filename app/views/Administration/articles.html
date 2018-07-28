@@ -1,0 +1,107 @@
+#{extends 'base.html' /}
+
+<h3><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" class="color1"></span> <a href="/admin/index">Go Back</a></h3>
+<h2>New/Update article</h2>
+#{if article }
+	<form method="post" action="/articles/update" enctype="multipart/form-data">
+	#{authenticityToken /}
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th><th>Language</th><th>Context</th><th>Description</th><th>Visible</th><th>
+				#{if article }
+				<input style="visibility: hidden;display: none;" type="text" name="id" value="${article.id}"/>
+				#{/if}
+				<span style="color: ${statusColor}">${status}</span>&nbsp;<input type="submit" class="btn btn-danger btn-sm right"/>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<td style="width: 200px"><input style="width: 98%" type="text" name="name" maxlength="50" value="${article.name}"/></td>
+				<td style="width: 20px"><input style="width: 98%" type="text" name="language" maxlength="10"  value="${article.language}"/></td>
+				<td style="width: 20px"><input style="width: 98%" type="text" name="context" maxlength="50"  value="${article.context}"/></td>
+				<td><input style="width: 98%" type="text" name="description" maxlength="200" value="${article.description}"/></td>
+				<td style="width: 30px"><input style="width: 98%" type="checkbox" name="visible" value="true" #{if article.visible }checked#{/if}/></td>
+				<td style="width: 250px"><input style="width: 98%" type="file" name="html" accept=".html"/></td>
+			</tr>
+			#{ifErrors}
+			<tr style="background: lightgrey;color: salmon;font-size:x-small" >
+				<td>#{error 'a.name' /}</td>
+				<td>#{error 'a.language' /}</td>
+				<td>#{error 'a.context' /}</td>
+				<td>#{error 'a.description' /}</td>
+				<td></td>
+				<td>#{error 'a.html' /}</td>
+			</tr>
+			#{/ifErrors}
+		</tbody>
+	</table>
+</form>
+#{/if}
+#{else}
+	<form method="post" action="/articles/create" enctype="multipart/form-data">
+	#{authenticityToken /}
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th><th>Language</th><th>Context</th><th>Description</th><th>Visible</th><th>
+				#{if article }
+				<input style="visibility: hidden;display: none;" type="text" name="id" value="${articleID}"/>
+				#{/if}
+				<span style="color: ${statusColor}">${status}</span>&nbsp;<input type="submit" class="btn btn-danger btn-sm right"/>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="active">
+				<td style="width: 200px"><input style="width: 98%" type="text" name="name" maxlength="50" value="${flash.name}"/></td>
+				<td style="width: 20px"><input style="width: 98%" type="text" name="language" maxlength="10"  value="${flash.language}"/></td>
+				<td style="width: 20px"><input style="width: 98%" type="text" name="context" maxlength="50"  value="${flash.context}"/></td>
+				<td><input style="width: 98%" type="text" name="description" maxlength="200" value="${flash.description}"/></td>
+				<td style="width: 30px"><input style="width: 98%" type="checkbox" name="visible" value="true" #{if flash.visible }checked#{/if}/></td>
+				<td style="width: 250px"><input style="width: 98%" type="file" name="html" accept=".html"/></td>
+			</tr>
+			#{ifErrors}
+			<tr style="background: lightgrey;color: salmon;font-size:x-small" >
+				<td>#{error 'a.name' /}</td>
+				<td>#{error 'a.language' /}</td>
+				<td>#{error 'a.context' /}</td>
+				<td>#{error 'a.description' /}</td>
+				<td></td>
+				<td>#{error 'a.html' /}</td>
+			</tr>
+			#{/ifErrors}
+		</tbody>
+	</table>
+</form>
+#{/else}
+<h2>Browse article</h2>
+<form method="post" action="/articles/actions">
+#{authenticityToken /}
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th style="width: 200px">Name</th><th style="width: 20px">Language</th><th style="width: 20px">Context</th><th>Description</th><th style="width: 50px">Date</th><th style="width: 30px">Visible</th><th style="width: 50px">Link</th><th style="width: 250px"><input type="submit" class="btn btn-danger btn-sm right"/></th>
+			</tr>
+		</thead>
+		<tbody>
+			#{list articles, as:'article'}
+			<tr class="active">
+				<td>${article.name}</td>
+				<td>${article.language}</td>
+				<td>${article.context}</td>
+				<td>${article.description}</td>
+				<td>${article.date}</td>
+				<td>${article.visible}</td>
+				<td>${article.html}</td>
+				<td>
+				<label>Remove <input type="checkbox" name="remove" value="${article.id}"/></label>
+				<label>Update <input type="checkbox" name="update" value="${article.id}"/></label>
+				</td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+</form>
+</div>

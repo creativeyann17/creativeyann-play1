@@ -1,0 +1,70 @@
+#{extends 'base.html' /}
+
+<script>
+	(function(){
+		setPage("aboutMenu");
+	})();
+</script>
+
+<div class="row">
+	 <div class="col-md-6">
+	   <h2>&{'aboutMe'}</h2>
+	   <table>
+		<tr><th rowspan="5" style="width: 180px;text-align: left;"><img style="margin-top: 10px;" src="public/images/profil2.jpg"/></th><td>Yann MARCOU (${page.getMyAge()} &{'years'})</td></tr>
+		<tr><td>&{'ENSISA'}</td></tr>
+		<tr><td><i>&{'DUT'}</i></td></tr>
+		<tr><td>&{'currentCity','Toulouse','FRANCE'}</td></tr>
+		<tr><td>&{'about.contact'} <a href="mailto:yann17.marcou@gmail.com">yann17.marcou@gmail.com</a></td></tr>
+	</table>
+	 </div>
+	 <div class="col-md-6">
+	   <h2>&{'aboutServer'}</h2>
+	   <table>
+			<tr>
+				<th rowspan="9" style="text-align: center; width: 180px;"><img src="public/images/raspberry.png"/></th>
+				<th style="width: 180px;">&{'appVersion'}</th><td>${page.appVersion} (build ${page.lastUpdate.format('yyMMddhhmmss')})</td>
+			</tr>
+			<tr>
+				<th>&{'hwDetails'}<td>${page.hwDetails}</td>
+			</tr>
+			<tr>
+				<th>&{'osDetails'}<td>${page.osDetails}</td>
+			</tr>
+			<tr>
+				<th>&{'kernelDetails'}<td>${page.kernelDetails}</td>
+			</tr>
+			<tr>
+				<th>&{'jreDetails'}<td>${page.jreDetails}</td>
+			</tr>
+			<tr>
+				<th>&{'playFramework'}<td>${play.version} (${play.Play.mode})</td>
+			</tr>
+			<tr>
+				<th>&{'serverRunningSince'}</th><td>${page.getRuntime().since()}</td>
+			</tr>
+			<tr>
+				<th>&{'serverMemory'}</th><td>${page.getMemory()}</td>
+			</tr>
+			<!-- <tr>
+				<th colspan="2"><a class="btn btn-danger" href="/admin" role="button">&{'about.admin'} &raquo;</a></p></th>
+			</tr> -->
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		 <h2>&{'about.thanks'}</h2>
+		 <p>&{'about.thanks.message'}</p>
+		 </p>
+	  </div>
+	 <div class="col-md-6">
+		 <h2>&{'about.link'}</h2>
+		 <a href="https://www.playframework.com/" target="_blanck">&{'about.link.1'}</a>: &{'about.link.1.message'}
+		 <br/>
+		 <a href="http://getbootstrap.com/" target="_blanck">&{'about.link.2'}</a>: &{'about.link.2.message'}
+		 <br/>
+		 <a href="http://glyphicons.com/" target="_blanck">&{'about.link.3'}</a>: &{'about.link.3.message'}
+ 	</div>
+</div>
+

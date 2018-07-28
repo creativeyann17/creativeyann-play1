@@ -1,0 +1,18 @@
+#{extends 'base.html' /}
+
+<div class="container" style="width: 300px">
+	#{if flash.contains("login.error")}
+	<div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> ${flash.get("login.error")}</div>
+	#{/if}
+	<h2>Authentification</h2>
+	<form method="POST" action="/login">
+	  #{authenticityToken /}
+	  <div class="form-group">
+	    <input autofocus="autofocus" maxlength="50" type="text" class="form-control" name="login" required="required" value="${flash.login}" placeholder="Login">
+	  </div>
+	  <div class="form-group">
+	    <input maxlength="50" type="password" class="form-control" name="password" required="required" placeholder="Password">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Login</button>
+	</form>
+</div>

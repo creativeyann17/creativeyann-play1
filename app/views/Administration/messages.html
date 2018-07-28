@@ -1,0 +1,27 @@
+#{extends 'base.html' /}
+
+<h3><span class="glyphicon glyphicon-arrow-left" aria-hidden="true" class="color1"></span> <a href="/admin/index">Go Back</a></h3>
+<h2>Browse messages</h2>
+<form method="post" action="/admin/msgActions">
+#{authenticityToken /}
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Subject</th><th>Email</th><th>Date</th><th><input class="btn btn-danger btn-sm right" type="submit"/></th>
+			</tr>
+		</thead>
+		<tbody>
+			#{list msgs, as:'msg'}
+			<tr class="active">
+				<td>${msg.subject}</td><td>${msg.email}</td><td>${msg.date}</td>
+				<td>
+					<label>Remove <input type="checkbox" name="remove" value="${msg.id}"/></label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5" >${msg.message}</td>
+			</tr>
+			#{/list}
+		</tbody>
+	</table>
+</form>

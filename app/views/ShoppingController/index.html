@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- META Informations -->
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	
+    	<!-- FavIcon -->
+		<link rel="icon" type="image/png" href="/public/images/shopping/icon.png" />
+    	
+    	<!-- All Boostrap CSS and JavaScript files -->
+    	<link href="/public/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    	<link href="/public/bootstrap-3.3.4/css/sticky-footer.css" rel="stylesheet">
+		
+		<title>A vendre!</title>
+		
+		<script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+		<script src="/public/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
+		<style>
+			body{
+				font-size: small;
+			}
+			.jumbotron{
+				margin-top: 20px;
+				padding: 20px;
+			}
+			.jumbotron p{
+				font-size: small;
+			}
+			img.small{
+				width: 100px;
+				height: auto;
+				cursor: pointer;
+			}
+			img.big{
+				width: 100%;
+				height: auto;
+			}
+			.description{
+				width: 50%;
+			}
+			.DISPO{
+				color: green;
+			}
+			.VENDU{
+				color: red;
+			}
+		</style>
+		
+		<script>
+		
+			$( document ).ready(function() {
+				$("#modal-item-image").modal("hide");
+				$("#modal-buy").modal("hide");
+			});
+		
+			function showImageBig(ctrl){
+				var src = $(ctrl).attr("src");
+				$("#modal-item-image img").attr("src",src);
+				$("#modal-item-image").modal("show");
+			}
+			
+			function validateBuy(ctrl){
+				var buyer = $(ctrl).find("input[name='buyer']").val();
+				if(!buyer || buyer.trim().length() == 0){
+					return false;
+				}
+				
+				return true;
+			}
+		</script>
+
+	</head>
+	<body>
+
+		<div class="container">
+		
+		<div class="jumbotron">
+		  <h4>Salut les gens!</h4>
+		  <p>Histoire de rendre mon déménagement un peu plus 'fun' j'ai fais cette petite page avec ce que je vends! Voilà donc en gros vous pouvez vous servir. Je rajouterai peut-être d'autres trucs au fur et à mesure. Si vous avez fait une boulette (ouai ouai), tout planté ou je sais pas trop quoi vous avez mon num ;)</p>
+			<i>Yannou!</i>
+		</div>
+		
+		
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>#</th><th>Description</th><th>Prix (€)</th><th>Etat</th><th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+				#{list items, as: 'item'}
+					<tr>
+						<th class="title" colspan="5">${item.name}</th>
+					</tr>
+					<tr>
+						<td>
+							<img class="small" alt="${item.name}" src="/public/images/shopping/${item.images}" onclick="showImageBig(this)">
+						</td>
+						<td class="description">${item.description}</td>
+						<td>
+						${item.sell} 
+						#{if item.buy}(Achat: ${item.buy})#{/if}
+						</td>
+						%{state = (item.buyer == null || item.buyer.trim().length() == 0) ? "DISPO":"VENDU"}%
+						<td class="${state}">${state}</td>
+						<td>
+							#{if state == "DISPO"}
+							<form method="POST" action="/shopping/buy" onsubmit="return validateBuy(this)"> 
+								 <div class="form-group">
+								    #{authenticityToken /}
+								    <input type="hidden" name="id" value="${item.id}">
+								  	<input type="text" class="form-control" name="buyer" placeholder="Votre nom" required="required">
+								  </div>
+								<button type="submit" class="btn btn-primary">Acheter</button>
+							</form>
+							#{/if}
+							#{else}
+							Voir avec ${item.buyer}
+							#{/else}
+						</td>
+					</tr>
+				#{/list}
+				</tbody>
+			</table>
+		
+			<div id="modal-item-image" class="modal fade" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+				    <div class="modal-body">
+				     	<img class="big" >
+				    </div>
+			    </div>
+			  </div>
+			</div>
+
+		</div>
+		
+	</body>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-100564204-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	
+</html>

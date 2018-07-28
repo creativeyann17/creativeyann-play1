@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Resizer</title>
+		<link href="/public/stylesheets/article.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		
+		<h2>Resizer (concurrent)</h2>
+		<p>
+		It was the beginning of this year (2014) in holiday and after my return I had some photos to send to family.
+		This is a topical case that everybody experienced one times in his life: resizing the photos, which are in HD, to 
+		smaller definition like width around 800 or 1000; This time I decide to put my concurrent knowledge of JAVA 7
+		ForkJoin framework in practice with a real use case: develop a concurrent photo resizer, and I have done it!
+		</p>
+		
+		<h4>Technical aspect</h4>
+		<p>
+		The concept is simple, there are 2x folder one called "input" where you put the pack of photos and another called "output"
+		where the resized pictures will be generated. The program detect the amount of available processors during the process.
+		You can try by hand to change the variable THREADS to 1 to see the difference.
+		</p>
+
+		<p>
+		<h4>Download</h4>
+		<ul>
+		<li><a href="/public/articles/data/Resizer.zip">Source code</a></li>
+		</ul>
+		</p>
+		
+	</body>
+</html>

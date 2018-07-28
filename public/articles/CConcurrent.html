@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>POSIX Concurrent library</title>
+		<link href="/public/stylesheets/article.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	
+	<h2>POSIX Concurrent library (self-made)</h2>
+		
+	<p>
+	<h4>Description</h4>
+	The concurrent library is my implementation of a QtConcurrent equivalent in C. It's very easy to use and portable on every Posix compliant system.
+	</p>
+
+	<p>
+	<h4>Requirement for the library</h4>
+	<ul>
+	<li>Posix Thread implementation</li>
+	<li>Multi-core processor (recommended)</li>
+	</ul>
+	</p>
+
+	<p>
+	<h4>Benchmark 1</h4>
+	The released package includes a benchmark example, here is the test configuration:
+	<ul>
+	<li>Hardware: Atom 1.8Ghz (4 Cores) 3.2GB RAM</li>
+	<li>Software: Xubuntu 64Bits, libconcurrent.a + TestIteractif/Concurrent compiled in 32Bits</li>
+	</ul>
+	The Test program is simple, find prime numbers in an input array, saved them and display the count of prime elements found at program end (the default input array size is 1 Million elements), results:
+	<p>
+<img src="/public/articles/images/bench1.png"/>
+	</p>
+	<p>
+	First the both tests display the same count of prime numbers :) second the Concurrent version is 3 times more efficient and consumes 100% of the CPU instead of 25% (because of my 4 cores). About RAM consumption I have noticed 1.1MB for both tests.
+	</p>
+
+	<p>
+	<h4>Benchmark 2</h4>
+	Under Windows with a more powerfull processor. I used a Cygwin environment for Posix compliance.
+	<ul>
+	<li>Hardware: Intel i5 2.8Ghz (4 Cores) 8GB RAM</li>
+	<li>Software: Windows 7 64Bits, libconcurrent.a + TestIteractif/Concurrent compiled in 32Bits</li>
+	</ul>
+	<p>
+<img src="/public/articles/images/bench2.png"/>
+	</p>
+	<p>
+	Both results confirm concept is efficient.
+	</p>
+
+	<p>
+	<h4>Download</h4>
+	<ul>
+	<li><a href="/public/articles/data/libconcurrent.zip">Source code</a></li>
+	</ul>
+	</p>
+		
+	</body>
+</html>

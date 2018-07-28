@@ -1,0 +1,58 @@
+.color1{
+	color: steelblue;
+}
+
+.right{
+	float: right;
+}
+
+hr{
+	border-top: 1px solid #ddd;
+}
+
+.table{
+	background-color: white;
+	font-size: normal;
+}
+
+html, body{
+	background-color: #eee;
+	width: 100%;
+	margin: 0;
+	text-align: justify;
+	font-size: normal;
+}
+
+header{
+	background-image: url("/public/images/header.jpg");
+	background-size: auto 100%;
+	background-repeat: repeat-x;
+	color: white;
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	
+}
+
+header h1{
+	margin: 30px 0 30px 15px;
+	font-size: 40px;
+}
+
+footer{
+	/*margin-top: 20px;*/
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+footer p{
+	margin: auto;
+	color: #444;
+	width: 50%;
+}
+
+.jumbotron{
+	padding: 20px;
+}
